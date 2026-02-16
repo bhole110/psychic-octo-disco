@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>THE XR JOURNEY</title>
+
+<link rel="preconnect" href="https://t.me">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '943291074880810');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+html,body{height:100%;overflow:hidden;}
+
+body{
+background:linear-gradient(135deg,#05060a,#0c0f1a);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100dvh;
+color:#fff;
+}
+
+.container{
+width:92%;
+max-width:370px;
+padding:24px;
+border-radius:22px;
+background:rgba(20,25,40,0.65);
+backdrop-filter:blur(14px);
+border:1px solid rgba(0,150,255,0.18);
+box-shadow:0 0 18px rgba(0,150,255,0.10);
+text-align:center;
+}
+
+.brand-title{
+font-size:24px;
+font-weight:800;
+color:#00d9ff;
+margin-bottom:18px;
+text-shadow:0 0 5px rgba(0,217,255,0.4);
+}
+
+.logo-container{
+width:110px;
+height:110px;
+margin:0 auto 18px;
+border-radius:50%;
+overflow:hidden;
+border:2px solid rgba(0,217,255,0.4);
+box-shadow:0 0 10px rgba(0,217,255,0.2);
+}
+
+.logo-container img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.timer-box{
+font-size:28px;
+font-weight:800;
+letter-spacing:2px;
+margin:14px 0;
+color:#00eaff;
+text-shadow:0 0 5px rgba(0,234,255,0.5);
+}
+
+.live-counter{
+font-size:14px;
+margin-bottom:18px;
+color:#7df9ff;
+font-weight:600;
+}
+
+.cta-btn{
+display:block;
+width:100%;
+padding:14px 0;
+margin-bottom:12px;
+border-radius:14px;
+border:none;
+font-size:15px;
+font-weight:700;
+cursor:pointer;
+transition:transform .15s ease;
+}
+
+.cta-btn:active{
+transform:scale(0.96);
+}
+
+.cta-btn.normal{
+background:linear-gradient(90deg,#00e0ff,#0077ff);
+color:#fff;
+box-shadow:0 0 10px rgba(0,191,255,0.25);
+}
+
+.cta-btn.vip{
+background:linear-gradient(90deg,#a855f7,#7b2ff7);
+color:#fff;
+box-shadow:0 0 10px rgba(168,85,247,0.25);
+}
+
+.hurry-up{
+font-weight:800;
+font-size:14px;
+margin-top:8px;
+color:#00eaff;
+}
+</style>
+
+<script>
+let timeLeft = 30;
+let users = 247;
+
+function startTimer(){
+const timer=document.getElementById("countdown");
+
+setInterval(()=>{
+timeLeft--;
+
+if(timeLeft<=0){
+timer.textContent="EXPIRED";
+return;
+}
+
+timer.textContent="00:"+(timeLeft<10?"0"+timeLeft:timeLeft);
+},1000);
+}
+
+function updateUsers(){
+const el=document.getElementById("liveUsers");
+
+setInterval(()=>{
+users+=Math.floor(Math.random()*2);
+el.textContent=users+"+ Users Joining Now";
+},3500);
+}
+
+/* ✅ BACK WORKING FIX */
+function goTelegram(){
+window.location.href="https://t.me/+DIkGWDOj5n8zMWJl";
+}
+
+window.addEventListener("load",()=>{
+startTimer();
+updateUsers();
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 class="brand-title">👑JOHNSON SURESHOT👑</h1>
+
+<div class="logo-container">
+<img src="https://i.ibb.co/CKd0g0RC/photo-2026-02-10-04-23-07.jpg" alt="XR Logo">
+</div>
+
+<div class="timer-box" id="countdown">00:30</div>
+
+<div class="live-counter" id="liveUsers">
+247+ Users Joining Now
+</div>
+
+<button class="cta-btn normal" onclick="goTelegram()">
+<i class="fab fa-telegram-plane"></i> JOIN NOW
+</button>
+
+<button class="cta-btn vip" onclick="goTelegram()">
+<i class="fas fa-bolt"></i> VIP FAST ACCESS
+</button>
+
+<p class="hurry-up">🔥 LIMITED SPOTS LEFT 🔥</p>
+
+</div>
+
+</body>
+</html>
