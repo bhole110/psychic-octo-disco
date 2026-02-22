@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title></title>
 
-<link rel="preconnect" href="https://t.me">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -18,184 +18,190 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '943291074880810');
+fbq('init', '1486052226190403');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1486052226190403&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-html,body{height:100%;overflow:hidden;}
-
-body{
-background:linear-gradient(135deg,#05060a,#0c0f1a);
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100dvh;
-color:#fff;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;-webkit-tap-highlight-color:transparent;}
+html,body{height:100%;overflow:hidden;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);}
+body{display:flex;justify-content:center;align-items:center;min-height:100dvh;color:#fff;}
 
 .container{
 width:92%;
-max-width:370px;
-padding:24px;
-border-radius:22px;
-background:rgba(20,25,40,0.65);
-backdrop-filter:blur(14px);
-border:1px solid rgba(0,150,255,0.18);
-box-shadow:0 0 18px rgba(0,150,255,0.10);
+max-width:380px;
+padding:28px 22px;
+border-radius:24px;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.1);
 text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,0.5);
 }
 
 .brand-title{
-font-size:24px;
+font-size:22px;
 font-weight:800;
-color:#00d9ff;
 margin-bottom:18px;
-text-shadow:0 0 5px rgba(0,217,255,0.4);
+background:linear-gradient(90deg,#00f5ff,#00ff94);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .logo-container{
-width:110px;
-height:110px;
-margin:0 auto 18px;
-border-radius:50%;
-overflow:hidden;
-border:2px solid rgba(0,217,255,0.4);
-box-shadow:0 0 10px rgba(0,217,255,0.2);
+width:110px;height:110px;margin:0 auto 15px;
+border-radius:50%;overflow:hidden;
+border:3px solid rgba(255,255,255,0.12);
+box-shadow:0 0 12px rgba(0,255,255,0.25);
+}
+.logo-container img{width:100%;height:100%;object-fit:cover;}
+
+.bold-profit{font-size:15px;font-weight:700;color:#00ffcc;margin-bottom:12px;}
+
+.timer-box{margin:12px 0;font-size:24px;font-weight:800;color:#00eaff;letter-spacing:2px;}
+
+.live-box{
+margin-bottom:18px;font-size:14px;font-weight:600;
+display:flex;justify-content:center;align-items:center;gap:8px;opacity:.9;
 }
 
-.logo-container img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
+.live-dot{width:8px;height:8px;background:#00ff94;border-radius:50%;animation:pulse 1s infinite;}
+@keyframes pulse{0%{opacity:1;}50%{opacity:.4;}100%{opacity:1;}}
 
-.timer-box{
-font-size:28px;
-font-weight:800;
-letter-spacing:2px;
-margin:14px 0;
-color:#00eaff;
-text-shadow:0 0 5px rgba(0,234,255,0.5);
-}
-
-.live-counter{
-font-size:14px;
-margin-bottom:18px;
-color:#7df9ff;
-font-weight:600;
-}
+.counter-number{font-weight:700;color:#ffc6ff;transition:opacity .3s ease;}
 
 .cta-btn{
-display:block;
-width:100%;
-padding:14px 0;
-margin-bottom:12px;
-border-radius:14px;
-border:none;
-font-size:15px;
-font-weight:700;
-cursor:pointer;
-transition:transform .15s ease;
+width:100%;padding:15px 0;border:none;border-radius:16px;
+font-size:16px;font-weight:700;cursor:pointer;margin-bottom:14px;
+transition:.25s ease;position:relative;overflow:hidden;
 }
 
-.cta-btn:active{
-transform:scale(0.96);
+.cta-btn.primary{
+background:linear-gradient(90deg,#00eaff,#0066ff);
+color:#fff;box-shadow:0 0 10px rgba(0,120,255,0.35);
 }
 
-.cta-btn.normal{
-background:linear-gradient(90deg,#00e0ff,#0077ff);
-color:#fff;
-box-shadow:0 0 10px rgba(0,191,255,0.25);
+.cta-btn.secondary{
+background:linear-gradient(90deg,#b66dff,#f857c1);
+color:#fff;box-shadow:0 0 10px rgba(200,100,255,0.35);
 }
 
-.cta-btn.vip{
-background:linear-gradient(90deg,#a855f7,#7b2ff7);
-color:#fff;
-box-shadow:0 0 10px rgba(168,85,247,0.25);
-}
+.cta-btn:active{transform:scale(0.96);}
 
-.hurry-up{
-font-weight:800;
-font-size:14px;
-margin-top:8px;
-color:#00eaff;
-}
+.footer-text{font-size:13px;opacity:.7;margin-top:10px;}
 </style>
 
 <script>
 let timeLeft = 30;
-let users = 247;
+let clickLocked = false;
+let timerInterval;
+let liveInterval;
+let liveCount;
 
 function startTimer(){
-const timer=document.getElementById("countdown");
+clearInterval(timerInterval);
+timeLeft = 30;
+const timer = document.getElementById("countdown");
+timer.textContent = "00:30";
 
-setInterval(()=>{
+timerInterval = setInterval(()=>{
 timeLeft--;
-
-if(timeLeft<=0){
-timer.textContent="EXPIRED";
-return;
+timer.textContent = "00:" + (timeLeft < 10 ? "0"+timeLeft : timeLeft);
+if(timeLeft <= 0){
+clearInterval(timerInterval);
+timer.textContent = "ENDED";
 }
-
-timer.textContent="00:"+(timeLeft<10?"0"+timeLeft:timeLeft);
 },1000);
 }
 
-function updateUsers(){
-const el=document.getElementById("liveUsers");
+function startLiveCounter(){
+clearInterval(liveInterval);
+const counterEl = document.getElementById("liveNumber");
+liveCount = Math.floor(Math.random() * 140) + 180;
+counterEl.textContent = liveCount;
 
-setInterval(()=>{
-users+=Math.floor(Math.random()*2);
-el.textContent=users+"+ Users Joining Now";
-},3500);
+liveInterval = setInterval(()=>{
+let increment = Math.floor(Math.random() * 2) + 1;
+liveCount += increment;
+counterEl.style.opacity = "0";
+setTimeout(()=>{
+counterEl.textContent = liveCount;
+counterEl.style.opacity = "1";
+},200);
+},4000);
 }
 
-/* ✅ BACK WORKING FIX */
-function goTelegram(){
-window.location.href="https://t.me/+DIkGWDOj5n8zMWJl";
-}
-
-window.addEventListener("load",()=>{
-startTimer();
-updateUsers();
+function resetButtons(){
+clickLocked = false;
+document.querySelectorAll(".cta-btn").forEach(btn=>{
+btn.innerHTML = '<i class="fab fa-telegram-plane"></i> ' + btn.dataset.original;
+btn.style.opacity = "1";
 });
-</script>
+}
 
+function goTelegram(e){
+if(clickLocked) return;
+if(!e.isTrusted) return;
+
+clickLocked = true;
+const btn = e.currentTarget;
+
+btn.dataset.original = btn.innerText;
+btn.innerHTML = '<i class="fas fa-check"></i> OPENING...';
+btn.style.opacity = "0.85";
+
+fbq('trackCustom', 'Subscribe');
+
+setTimeout(()=>{
+window.location.href = "https://t.me/+DIkGWDOj5n8zMWJl";
+},500);
+}
+
+window.addEventListener("pageshow", function(event){
+if(event.persisted){
+resetButtons();
+startTimer();
+startLiveCounter();
+}
+});
+
+window.onload = function(){
+startTimer();
+startLiveCounter();
+};
+</script>
 </head>
 
 <body>
-
 <div class="container">
-
-<h1 class="brand-title">👑JOHNSON SURESHOT👑</h1>
+<h1 class="brand-title">JOHNSON NUMERSHOT</h1>
 
 <div class="logo-container">
-<img src="https://i.ibb.co/CKd0g0RC/photo-2026-02-10-04-23-07.jpg" alt="XR Logo">
+<img src="https://i.ibb.co/CKd0g0RC/photo-2026-02-10-04-23-07.jpg">
 </div>
+
+<p class="bold-profit">DAILY FREE GIFTCODE</p>
 
 <div class="timer-box" id="countdown">00:30</div>
 
-<div class="live-counter" id="liveUsers">
-247+ Users Joining Now
+<div class="live-box">
+<div class="live-dot"></div>
+LIVE • <span class="counter-number" id="liveNumber"></span> USERS IN VC
 </div>
 
-<button class="cta-btn normal" onclick="goTelegram()">
+<button class="cta-btn primary" onclick="goTelegram(event)">
 <i class="fab fa-telegram-plane"></i> JOIN NOW
 </button>
 
-<button class="cta-btn vip" onclick="goTelegram()">
-<i class="fas fa-bolt"></i> VIP FAST ACCESS
+<button class="cta-btn secondary" onclick="goTelegram(event)">
+<i class="fab fa-telegram-plane"></i> VIP CHANNEL ACCESS
 </button>
 
-<p class="hurry-up">🔥 LIMITED SPOTS LEFT 🔥</p>
-
+<p class="footer-text">Official Channel • Secure Access</p>
 </div>
-
 </body>
 </html>
